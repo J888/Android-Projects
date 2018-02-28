@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ModifiedColorSelection</string>
+
+
+    <string-array name="labels">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Yellow</item>
+        <item>White</item>
+        <item>Gray</item>
+        <item>Purple</item>
+        <item>Aqua</item>
+        <item>Magenta</item>
+        <item>Lime</item>
+    </string-array>
+</resources>
