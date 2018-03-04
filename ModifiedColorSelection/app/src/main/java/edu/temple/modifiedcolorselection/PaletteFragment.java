@@ -77,7 +77,7 @@ public class PaletteFragment extends Fragment {
         try {
             mCallback = (OnColorSelectedListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(context.toString()+ "must implement ONColorSelectedListener");
+            throw new ClassCastException(context.toString()+ "must implement OnColorSelectedListener");
         }
     }
 }
