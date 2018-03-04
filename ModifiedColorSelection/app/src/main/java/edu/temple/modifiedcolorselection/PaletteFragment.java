@@ -71,6 +71,13 @@ public class PaletteFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mCallback = (OnColorSelectedListener) context;
+
+        // Make sure the parent activity implemented callback interface, throw exception
+        // if it did not
+        try {
+            mCallback = (OnColorSelectedListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()+ "must implement ONColorSelectedListener");
+        }
     }
 }
