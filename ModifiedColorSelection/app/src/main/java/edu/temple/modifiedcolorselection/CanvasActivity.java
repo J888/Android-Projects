@@ -24,4 +24,6 @@ public class CanvasActivity extends Activity {
         c.setBackgroundColor(Color.parseColor(color));
 
     }
+
+
 }
