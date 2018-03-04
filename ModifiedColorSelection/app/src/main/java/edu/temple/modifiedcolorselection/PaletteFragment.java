@@ -45,8 +45,6 @@ public class PaletteFragment extends Fragment {
 
         String[] gridLabels = getResources().getStringArray(R.array.labels);
 
-
-
         customAdapter myColorAdapter = new customAdapter(this.getContext(), R.layout.grid_view_item, gridLabels, colors);
 
         myGridView = v.findViewById(R.id.myGridView);
@@ -60,10 +58,6 @@ public class PaletteFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        View view = getView();
-        if(view!=null){
-
-        }
 
         myGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

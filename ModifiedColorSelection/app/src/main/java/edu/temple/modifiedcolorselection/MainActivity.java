@@ -15,8 +15,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 /**
- * Created by John Hyland on 2/14/18.
- * CIS 3515 Lab 4
+ * Created by John Hyland on 3/4/18
+ * CIS 3515 Lab 6
+ * Two fragment color selection
  */
 
 public class MainActivity extends FragmentActivity
