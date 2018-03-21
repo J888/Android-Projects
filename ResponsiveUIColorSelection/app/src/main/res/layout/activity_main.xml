@@ -4,31 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.temple.modifiedcolorselection.MainActivity">
+    android:orientation="vertical"
+    tools:context="edu.temple.responsiveuicolorselection.MainActivity">
 
-    <fragment
-        android:id="@+id/paletteFragment"
-        class="edu.temple.modifiedcolorselection.PaletteFragment"
+    <!--<fragment-->
+        <!--android:id="@+id/paletteFragment"-->
+        <!--class="edu.temple.responsiveuicolorselection.PaletteFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="495dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"></fragment>-->
+
+    <!--<fragment-->
+        <!--android:id="@+id/canvasFragment"-->
+        <!--class="edu.temple.responsiveuicolorselection.CanvasFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="495dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"></fragment>-->
+    <FrameLayout
+        android:id="@+id/fragContainer"
         android:layout_width="match_parent"
-        android:layout_height="495dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></fragment>
-
-    <fragment
-        android:id="@+id/canvasFragment"
-        class="edu.temple.modifiedcolorselection.CanvasFragment"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paletteFragment"></fragment>
-
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

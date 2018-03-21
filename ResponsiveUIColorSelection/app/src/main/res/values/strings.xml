@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ModifiedColorSelection</string>
+    <string name="app_name">Responsive UI Color Selection</string>
 
 
     <string-array name="labels">

@@ -1,4 +1,4 @@
-package edu.temple.modifiedcolorselection;
+package edu.temple.responsiveuicolorselection;
 
 import org.junit.Test;
 

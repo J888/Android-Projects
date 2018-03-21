@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     tools:context="edu.temple.responsiveuicolorselection.CanvasFragment"
     android:id="@+id/fragment_canvas"
-
     >
 
 

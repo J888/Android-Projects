@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ModifiedColorSelection.iml" filepath="$PROJECT_DIR$/ModifiedColorSelection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ResponsiveUIColorSelection.iml" filepath="$PROJECT_DIR$/ResponsiveUIColorSelection.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
