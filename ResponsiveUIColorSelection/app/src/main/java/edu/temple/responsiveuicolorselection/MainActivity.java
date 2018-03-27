@@ -23,7 +23,7 @@ public class MainActivity extends FragmentActivity
     implements PaletteFragment.OnColorSelectedListener{
 
     GridView myGridView;
-    Boolean twoPanes, displayingColorPortrait = false;
+    Boolean twoPanes;
     FragmentTransaction transaction;
     String selected_color;
     private static final String COLOR_KEY = "theColor";
@@ -34,8 +34,10 @@ public class MainActivity extends FragmentActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         twoPanes = (   (findViewById(R.id.canvasFragment) != null)
                         && (findViewById(R.id.paletteFragment)!=null));
+
 
         // If we're being restored from a previous state,
         // then we don't need to do anything and should return or else
@@ -53,24 +55,26 @@ public class MainActivity extends FragmentActivity
                 findViewById(R.id.canvasFragment).setBackgroundColor(Color.parseColor(savedColor));
             }
 
-            return;
-        }
-
-
-        if(!twoPanes){
-
-            FragmentManager fm = getSupportFragmentManager();
-            pf = new PaletteFragment();
-            transaction = fm.beginTransaction();
-            transaction.add(R.id.fragContainer, pf);
-            transaction.addToBackStack(null);
-            transaction.commit();
 
         }
 
-        else if(findViewById(R.id.paletteFragment)==null){
+
+        if(  !twoPanes   && ( findViewById(R.id.paletteFragment)==null)   ){
+
+            if(findViewById(R.id.paletteFragment)==null) {
+
+                FragmentManager fm = getSupportFragmentManager();
+                pf = new PaletteFragment();
+                transaction = fm.beginTransaction();
+                transaction.add(R.id.fragContainer, pf);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+
+        }
+
+        else if(findViewById(R.id.paletteFragment)==null) {
             //if not already created
-
             FragmentManager fm = getSupportFragmentManager();
             pf = new PaletteFragment();
             transaction = fm.beginTransaction().add(R.id.paletteFragment, pf);
@@ -78,7 +82,6 @@ public class MainActivity extends FragmentActivity
             transaction.commit();
 
         }
-
 
 
     }
@@ -96,12 +99,13 @@ public class MainActivity extends FragmentActivity
             CanvasFragment cf = (CanvasFragment) getSupportFragmentManager().findFragmentById(R.id.canvasFragment);
             cf.changeBackgroundColor(selectedColor);
 
+
         } else {
 
             // Create fragment and give it an argument specifying the color it should show
             CanvasFragment newFragment = new CanvasFragment();
             Bundle args = new Bundle();
-            args.putString(selectedColor, null);
+            args.putString("passColorToFrag", selectedColor);
             newFragment.setArguments(args);
 
             transaction = getSupportFragmentManager().beginTransaction();
@@ -112,20 +116,26 @@ public class MainActivity extends FragmentActivity
 
             // Commit the transaction
             transaction.commit();
-            newFragment.changeBackgroundColor(selectedColor);
+
 
         }
 
     }
 
 
+
     // Android calls this before it destroys the activity to change orientation
     // so this is where we save the color in the instance state
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
 
-        outState.putString(COLOR_KEY, selected_color);
+        if(selected_color!=null) {
+            outState.putString(COLOR_KEY, selected_color);
+        }
+
+        if(outState!=null && !twoPanes) {
+            super.onSaveInstanceState(outState);
+        }
 
     }
 

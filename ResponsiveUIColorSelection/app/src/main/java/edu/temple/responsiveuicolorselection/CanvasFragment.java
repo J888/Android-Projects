@@ -19,12 +19,11 @@ public class CanvasFragment extends Fragment {
 
     View v;
     FrameLayout fl;
+    String selected_color_passed_to_frag;
 
     public CanvasFragment() {
         // Required empty public constructor
-
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,24 +32,23 @@ public class CanvasFragment extends Fragment {
 
         v = inflater.inflate(R.layout.fragment_canvas, container, false);
         fl = v.findViewById(R.id.fragment_canvas);
-        v.setBackgroundColor(Color.parseColor("Red"));
 
-        // Inflate the layout for this fragment
+        //get color from the main activity
+        Bundle bundle = this.getArguments();
+        if(bundle!=null) {
+           selected_color_passed_to_frag = bundle.getString("passColorToFrag", "White");
+
+            v.setBackgroundColor(Color.parseColor(selected_color_passed_to_frag));
+        }
+        // inflate the layout
        return v;
     }
 
-    public void changeBackgroundColor(String selectedColor){
-        Log.i("gettingHERE", "true");
-        if(fl!=null){
 
+    public void changeBackgroundColor(String selectedColor){
+        if(isAdded()) {
             fl.setBackgroundColor(Color.parseColor(selectedColor));
         }
-        else {
-            Log.i("selectedColor", selectedColor);
-            v.setBackgroundColor(Color.parseColor(selectedColor));
-        }
-
 
     }
-
 }

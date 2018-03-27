@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ModifiedColorSelection</string>
+    <string name="app_name">Responsive UI Color Selection Español</string>
     <string-array name="labels">
         <item>Rojo</item>
         <item>Azul</item>

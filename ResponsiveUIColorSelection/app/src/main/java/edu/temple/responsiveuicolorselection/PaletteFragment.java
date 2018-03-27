@@ -61,6 +61,7 @@ public class PaletteFragment extends Fragment {
         myGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
                 mCallback.onColorSelected(colors[position]);
             }
         });
