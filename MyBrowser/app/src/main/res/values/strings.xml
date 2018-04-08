@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Browser</string>
+
+    <string name="action_go">Go</string>
+
+    <string name="action_new">New</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_next">Next</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
