@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mein Portfolio</string>
+    <string name="search_title">StocksSearch</string>
+    <string name="search_hint">Aktien suchen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_stocks_placeholder">Keine Bestände hier. Suche, um mit dem Hinzufügen zu beginnen!</string>
+</resources>

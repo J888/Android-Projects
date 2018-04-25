@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myportfolio.NavigationFragment"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/noStocksPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="967dp"
+        android:textAlignment="center"
+        android:text="@string/no_stocks_placeholder"
+        android:textSize="35px"
+        android:visibility="gone"
+        />
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+</LinearLayout>

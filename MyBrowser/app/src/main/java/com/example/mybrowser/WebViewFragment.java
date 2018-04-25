@@ -47,12 +47,10 @@ public class WebViewFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if(getArguments()!=null) {
             myURL = getArguments().getString("URL");
-            Toast.makeText(getActivity(), "Got this URL onCreate: "+myURL, Toast.LENGTH_SHORT).show();
         }
 
         if(savedInstanceState!=null){
             myURL = savedInstanceState.getString("URL");
-            Toast.makeText(getActivity(), "Got this URL onCreate: "+myURL, Toast.LENGTH_SHORT).show();
         }
 
     }
